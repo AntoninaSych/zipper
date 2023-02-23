@@ -20,7 +20,7 @@ module Zipper
                 end
 
                 def process(zip_entry)
-                    puts zip_entry.get_input_stream.read
+                    Zipper.processing.call(zip_entry.get_input_stream.read)
                 end
 
                 private
